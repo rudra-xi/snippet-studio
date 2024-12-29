@@ -28,4 +28,4 @@ This repository is a treasure trove of web development snippets and components, 
 
 ## License
 
-This project is licensed under the terms specified in the `LICENCE.MD` file.
+This project is licensed under the terms specified in the [`LICENSE.MD`](./LICENSE.MD) file.
