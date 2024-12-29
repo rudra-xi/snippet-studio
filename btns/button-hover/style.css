@@ -1,0 +1,38 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,
+body {
+	background: #333;
+}
+.wrapper {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+button {
+	background-color: #c6c6c6;
+	color: #111;
+	border-radius: 10rem;
+	font-size: 1.5rem;
+	padding: 2rem 4em;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+	border: 2px solid #111;
+	box-shadow: 0 0 0 0 #111;
+}
+
+button:hover {
+	transform: translateY(-5px) translateX(-3px);
+	box-shadow: 2px 5px 0 0 #111;
+}
+
+button:active {
+	transform: translateY(5px) translateX(3px);
+	box-shadow: 0 0 0 0 #111;
+}

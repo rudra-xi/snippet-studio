@@ -1,0 +1,56 @@
+* {
+	margin: 0%;
+	padding: 0%;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+}
+
+:root {
+	--size: 130px;
+	--light-color: #eaeaea;
+	--dark-color: #284b63;
+	--shadow-color: #353535;
+	--speed: 20s;
+
+	--pattern: var(--dark-color) 4% 14%, var(--light-color) 14% 24%,
+		var(--dark-color) 22% 34%, var(--light-color) 34% 44%,
+		var(--dark-color) 44% 56%, var(--light-color) 56% 66%,
+		var(--dark-color) 66% 76%, var(--light-color) 76% 86%,
+		var(--dark-color) 86% 96%;
+}
+
+.container {
+	height: 100%;
+	background: radial-gradient(
+			100% 100% at 100% 0,
+			var(--light-color) 4%,
+			var(--pattern),
+			var(--shadow-color) 96%,
+			#0000
+		),
+		radial-gradient(
+				100% 100% at 0 100%,
+				#0000,
+				var(--shadow-color) 4%,
+				var(--pattern),
+				var(--light-color) 96%
+			)
+			var(--light-color);
+	background-size: var(--size) var(--size);
+
+	/* optional */
+	animation: loop var(--speed) linear infinite;
+	transform: rotate(180deg);
+}
+
+@keyframes loop {
+	0% {
+		background-position: top right;
+	}
+	100% {
+		background-position: bottom left;
+	}
+}

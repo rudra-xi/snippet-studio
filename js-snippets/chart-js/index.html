@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<!-- Link to external CSS file -->
+		<link rel="stylesheet" href="style.css" />
+		<title>Graphs: Chart.Js</title>
+	</head>
+	<body>
+		<div class="head"><h1>Chart.JS</h1></div>
+
+		<!-- Container for chart canvases -->
+		<div class="container">
+			<!-- Bar chart canvas -->
+			<div><canvas id="barChart"></canvas></div>
+			<!-- Line chart canvas -->
+			<div><canvas id="lineChart"></canvas></div>
+			<!-- Pie chart canvas -->
+			<div><canvas id="pieChart"></canvas></div>
+			<!-- Polar chart canvas -->
+			<div><canvas id="polarChart"></canvas></div>
+		</div>
+
+		<!-- Include Chart.js library -->
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+		<!-- Include custom JavaScript file -->
+		<script src="script.js"></script>
+	</body>
+</html>

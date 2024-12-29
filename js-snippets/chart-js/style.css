@@ -1,0 +1,55 @@
+/* Reset default styles and use border-box for all elements */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	height: 100vh;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	color: #444;
+	background-color: #c7c7c7;
+}
+
+/* Style the header section */
+.head {
+	width: 100%;
+	text-align: center;
+	padding: 20px;
+	background: #ededed;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the main heading */
+h1 {
+	letter-spacing: 2px;
+}
+
+/* Style the container for charts */
+.container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr); /* Create a 2-column layout */
+	gap: 20px;
+	width: 80%;
+	max-width: 900px;
+	margin-top: 20px;
+}
+
+/* Style individual chart containers */
+.container > div {
+	background: #fff;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure canvas elements take full width of their containers */
+canvas {
+	width: 100%;
+}

@@ -1,0 +1,50 @@
+/* @import "https://fonts.googleapis.com/css?family=Press%20Start%202P"; */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "VT323";
+	font-size: 1.5rem;
+	line-height: 1.5;
+	letter-spacing: 1px;
+	height: 100%;
+	background-color: #4c1f7a;
+	text-transform: uppercase;
+}
+
+li {
+	color: #eeeeee;
+}
+
+.arrow i {
+	display: none;
+	text-decoration: none;
+	color: #ff8000;
+}
+
+.arrow {
+	position: relative;
+	display: block;
+	color: #219b9d;
+}
+
+.arrow:hover {
+	cursor: pointer;
+	padding-left: 1px;
+	background: rgba(255, 128, 0, 0.1);
+}
+
+.arrow:hover i {
+	display: block;
+	position: absolute;
+	top: 0.5em;
+	left: -3.5em;
+}

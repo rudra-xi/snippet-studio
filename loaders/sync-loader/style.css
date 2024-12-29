@@ -1,0 +1,137 @@
+* {
+	margin: 0;
+	padding: 0%;
+	box-sizing: border-box;
+}
+:root {
+	--loader-color: #b85042;
+	--loaderText-color: #e7e8d1;
+	--loaderLight-color: #a7beae;
+	--background: #002c2e;
+}
+body {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--background);
+}
+
+.loader {
+	width: 120px;
+	height: 50px;
+	position: relative;
+}
+
+.loader-text {
+	font-family: "Roboto Mono";
+	position: absolute;
+	color: var(--loaderText-color);
+	animation: text-animation 3.5s ease both infinite;
+	font-size: 0.7rem;
+	letter-spacing: 1px;
+}
+
+.loading {
+	background-color: var(--loader-color);
+	border-radius: 50px;
+	display: block;
+	height: 20px;
+	width: 70px;
+	bottom: 0;
+	position: absolute;
+	transform: translateX(64px);
+	animation: loader-animation 3.5s ease both infinite;
+}
+
+.loading::before {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: var(--loaderLight-color);
+	border-radius: inherit;
+	animation: loaderLight-animation 3.5s ease both infinite;
+}
+
+@keyframes text-animation {
+	0% {
+		letter-spacing: 1px;
+		transform: translateX(0px);
+	}
+
+	40% {
+		letter-spacing: 3px;
+		transform: translateX(56px);
+	}
+
+	80% {
+		letter-spacing: 1px;
+		transform: translateX(52px);
+	}
+
+	90% {
+		letter-spacing: 4px;
+		transform: translateX(0px);
+	}
+
+	100% {
+		letter-spacing: 1px;
+		transform: translateX(0px);
+	}
+}
+
+@keyframes loader-animation {
+	0% {
+		width: 36px;
+		transform: translateX(0px);
+	}
+
+	40% {
+		width: 100%;
+		transform: translateX(0px);
+	}
+
+	80% {
+		width: 36px;
+		transform: translateX(64px);
+	}
+
+	90% {
+		width: 100%;
+		transform: translateX(0px);
+	}
+
+	100% {
+		width: 36px;
+		transform: translateX(0px);
+	}
+}
+
+@keyframes loaderLight-animation {
+	0% {
+		transform: translateX(0px);
+		width: 36px;
+	}
+
+	40% {
+		transform: translateX(0%);
+		width: 80%;
+	}
+
+	80% {
+		width: 100%;
+		transform: translateX(0px);
+	}
+
+	90% {
+		width: 80%;
+		transform: translateX(35px);
+	}
+
+	100% {
+		transform: translateX(0px);
+		width: 36px;
+	}
+}

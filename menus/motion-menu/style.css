@@ -1,0 +1,105 @@
+/* Import Google Font 'Bayon' */
+@import url("https://fonts.googleapis.com/css2?family=Bayon&display=swap");
+
+/* Reset default styles and set font family */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Bayon", sans-serif;
+}
+
+/* Style the body */
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	overflow: hidden;
+	background: #e7f0dc;
+}
+
+/* Style the unordered list */
+ul {
+	position: relative;
+}
+
+/* Style list items */
+ul li {
+	list-style: none;
+	text-align: center;
+}
+
+/* Style links within list items */
+ul li a {
+	color: #333;
+	text-decoration: none;
+	font-size: 3em;
+	letter-spacing: 0.1em;
+	padding: 5px 20px;
+	display: inline-flex;
+	font-weight: 700;
+	transition: 0.5s;
+}
+
+/* Change link color on hover over the list */
+ul:hover li a {
+	color: #0002;
+}
+
+/* Change link color and background on hover over individual items */
+ul li:hover a {
+	color: #000;
+	background: transparent;
+}
+
+/* Create pseudo-element for hover effect */
+ul li a:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 40%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 5em;
+	color: rgba(0, 0, 0, 0.1);
+	border-radius: 50%;
+	z-index: -5;
+	opacity: 0;
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing: 500px;
+	transition: letter-spacing 0.5s, left 0.5s;
+}
+
+/* Style the pseudo-element on hover */
+ul li a:hover:before {
+	content: attr(data-text);
+	opacity: 1;
+	left: 50%;
+	letter-spacing: 10px;
+	width: 1800px;
+	height: 1800px;
+}
+
+/* Set different background colors for each menu item */
+ul li:nth-child(6n + 1) a:before {
+	background: #624e88;
+}
+ul li:nth-child(6n + 2) a:before {
+	background: #cb80ab;
+}
+ul li:nth-child(6n + 3) a:before {
+	background: #7eacb5;
+}
+ul li:nth-child(6n + 4) a:before {
+	background: #ff8a8a;
+}
+ul li:nth-child(6n + 5) a:before {
+	background: #eecad5;
+}
+ul li:nth-child(6n + 6) a:before {
+	background: #5f6f65;
+}
